@@ -3,7 +3,40 @@ html {
   scroll-behavior: smooth;
 
   body {
-   background-color: red
+   background-color: rgb(223, 223, 223);
+
+   .navbar-nav.mr-auto.ml-5 li.nav-item a{
+    font-size: 2vw;
+  }
+  .btn.btn-info.login{
+    margin-right: 3vh;
+  }
+  .btn.btn-info.register{
+    margin-right: 6vh;
+  }
+
+   .jumbotron{
+     padding: 0;
+   }
+
+    nav a img{
+      width: 20vh;
+      height: 20vh;
+    }
+    .navbar-toggler{
+     
+      background-color: rgb(155, 155, 155);
+    }
+    .carousel-inner{
+      max-height: 600px;
+    }
+    .carousel-caption{
+  top: 100px;
+    
+    }
+    .modal-content{
+      top: 100px;
+    }
   }
 }
 
