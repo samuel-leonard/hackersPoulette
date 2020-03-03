@@ -7,6 +7,14 @@ html {
 
    .navbar-nav.mr-auto.ml-5 li.nav-item a{
     font-size: 2vw;
+    color: rgb(97, 97, 97);
+    transition: color 0.5s;
+    border-radius: 6px;
+    
+  }
+    .navbar-nav.mr-auto.ml-5 li.nav-item a:hover{
+    color: white;
+    background-color: rgb(95, 95, 95);
   }
   .btn.btn-info.login{
     margin-right: 3vh;
