@@ -1,0 +1,54 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
+  background-color: #dfdfdf;
+}
+
+html body .navbar-nav.mr-auto.ml-5 li.nav-item a {
+  font-size: 2vw;
+  color: #616161;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  border-radius: 6px;
+}
+
+html body .navbar-nav.mr-auto.ml-5 li.nav-item a:hover {
+  color: white;
+  background-color: #5f5f5f;
+}
+
+html body .btn.btn-info.login {
+  margin-right: 3vh;
+}
+
+html body .btn.btn-info.register {
+  margin-right: 6vh;
+}
+
+html body .jumbotron {
+  padding: 0;
+}
+
+html body nav a img {
+  width: 20vh;
+  height: 20vh;
+}
+
+html body .navbar-toggler {
+  background-color: #9b9b9b;
+}
+
+html body .carousel-inner {
+  max-height: 600px;
+}
+
+html body .carousel-caption {
+  top: 100px;
+}
+
+html body .modal-content {
+  top: 100px;
+}
+/*# sourceMappingURL=style.css.map */
