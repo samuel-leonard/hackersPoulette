@@ -3,6 +3,7 @@ html {
   scroll-behavior: smooth;
 
   body {
+   /* background-color: ; */
    background-color: rgb(223, 223, 223);
 
    .navbar-nav.mr-auto.ml-5 li.nav-item a{
@@ -44,6 +45,13 @@ html {
     }
     .modal-content{
       top: 100px;
+    }
+    .comments{
+      font-style: italic;
+      font-size: 16px;
+      color: #d82c2e;
+      height: 25px;
+      
     }
   }
 }
