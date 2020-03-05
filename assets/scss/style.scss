@@ -78,6 +78,9 @@ html {
     .background-form{
       background-color: #15c5bd;
     }
+    .card img{
+      border:0;
+    }
     .btn{
       background-color:#15c5bd;
     }
@@ -98,6 +101,15 @@ html {
     #icon a{
       color:#15c5bd;
     }
+    .ohnohoney{
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 0;
+      z-index: -1;
+  }
 
   }
 }
