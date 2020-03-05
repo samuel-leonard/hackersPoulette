@@ -364,7 +364,6 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                 </div>
 
 
-
             </div>
 
             <!--Extension de garantie-->
@@ -394,7 +393,6 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                     </div>
                 </div>
 
-
             </div>
 
             <!--online training-->
@@ -423,7 +421,6 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                     </div>
                 </div>
 
-
             </div>
 
             <!--Démonstration en entreprise-->
@@ -440,7 +437,6 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                     <div class="card-header">
                         Démonstration en entrerprise
                     </div>
-
 
                     <div class="card-body">
                         <h5 class="card-title">Démonstration en entreprise</h5>
@@ -500,13 +496,11 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">@</div>
                                         </div>
-                                        <input type="text" name="email" placeholder="Saisissez votre email"
-                                            class="form-control" value="<?php echo $email; ?>">
+                                        <input type="text" name="email" placeholder="Saisissez votre email" class="form-control" value="<?php echo $email; ?>">
                                         <p class="comments"><?php echo $emailError; ?></p>
                                     </div>
                                 </div>
                             </div>
-
 
                             <!--gender-->
 
@@ -776,7 +770,6 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                                         <option value="Yougoslavie">Yougoslavie </option>
                                         <option value="Zambie">Zambie </option>
                                         <option value="Zimbabwe">Zimbabwe </option>
-
                                     </select>
                                 </div>
                             </div>
@@ -793,22 +786,17 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                             </div>
                         </div>
 
-                        <!--honeypot-->
-
-                        <label class="ohnohoney" for="name"></label>
-                        <input class="ohnohoney" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
-                        <label class="ohnohoney" for="email"></label>
-                        <input class="ohnohoney" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
-
                         <!--submited-->
-                        <button class="btn text-white my-3 btn-lg" type="submit" id="btn-form"><i class ="fa fa-envelope"></i>
-                        Envoyer</button>
 
+                        <button class="btn text-white my-3 btn-lg" type="submit" id="btn-form"><i class ="fa fa-envelope"></i> Envoyer</button>
+                        <p style="display:<?php if($isSuccess) echo'block'; else echo 'none'; ?>"> Votre message a bien été envoyé!!!</p>
                     </div>
                 </div>
             </form>
         </div>
+
         <!-- Footer -->
+
         <footer class="page-footer font-small text-white  pt-4 mt-5">
 
             <div class="container text-center text-md-left">
