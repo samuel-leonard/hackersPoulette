@@ -3,20 +3,30 @@ html {
 }
 
 html body {
-  background-color: #dfdfdf;
+  background-color: #FFF;
+  font-family: 'bellotaregular';
 }
 
 html body .navbar-nav.mr-auto.ml-5 li.nav-item a {
   font-size: 2vw;
-  color: #616161;
+  color: #15c5bd;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
   border-radius: 6px;
 }
 
+@font-face {
+  html body {
+    font-family: 'bellotaregular';
+    src: url("../bellota_regular_macroman/Bellota-Regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
 html body .navbar-nav.mr-auto.ml-5 li.nav-item a:hover {
   color: white;
-  background-color: #5f5f5f;
+  background-color: #15c5bd;
 }
 
 html body .btn.btn-info.login {
@@ -37,7 +47,7 @@ html body nav a img {
 }
 
 html body .navbar-toggler {
-  background-color: #9b9b9b;
+  background-color: #15c5bd;
 }
 
 html body .carousel-inner {
@@ -50,5 +60,49 @@ html body .carousel-caption {
 
 html body .modal-content {
   top: 100px;
+}
+
+html body .blue {
+  color: #15c5bd;
+}
+
+html body #card:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+html body #myNav {
+  background-color: white;
+}
+
+html body .background-form {
+  background-color: #15c5bd;
+}
+
+html body .btn {
+  background-color: #15c5bd;
+}
+
+html body .footer-copyright a {
+  color: #15c5bd;
+  font-family: "bellotaregular";
+}
+
+html body .page-footer {
+  background-color: #303030;
+}
+
+html body #btn-form {
+  background-color: #303030;
+}
+
+html body #list-link a {
+  color: #15c5bd;
+}
+
+html body #icon a {
+  color: #15c5bd;
 }
 /*# sourceMappingURL=style.css.map */
