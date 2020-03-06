@@ -1,6 +1,6 @@
 <?php 
-$prenom = $nom = $email = $genre = $sujet = $pays = $message = "";
-$prenomError = $nomError = $emailError = $genreError = $sujetError = $paysError = $messageError = "";
+$prenom = $nom = $email = $genre = $sujet = $pays = $message = $name = "";
+$prenomError = $nomError = $emailError = $genreError = $sujetError = $paysError = $messageError = $nameError = "";
 $isSuccess = false;
 $emailTo = "tiagogameiro15@gmail.com";
 
@@ -11,12 +11,13 @@ $nom = veryfiInput($_POST['nom']);
 $email = veryfiInput($_POST['email']);
 
 
-$genre = veryfiInput($_POST['genre']);
-$_POST['genre'];
+$genre = $_POST['genre'];
+/* $_POST['genre']; */
 
 $sujet = veryfiInput($_POST['sujet']);
 $pays = veryfiInput($_POST['pays']);
 $message = veryfiInput($_POST['message']);
+$name = veryfiInput($_POST['name']);
 $isSuccess = true;
 $emailText = "";
 
@@ -28,43 +29,89 @@ $isSuccess = false;
 }
 else
 $emailText .= "Prenom: $prenom\n";
+
 if(empty($nom)){
 $nomError = "Ecrivez votre nom svp.";
 $isSuccess = false;
 }
 else
 $emailText .= "Nom: $nom\n";
-// if(empty($email)){
-// $emailError = "Ecrivez votre mail svp.";
-// }
-// if($genre == 'Genre'){
-// $genreError = "Ecrivez votre genre svp.";
-// }
+
+if(!isEmail($email)){
+    $emailError = "Ecrivez une adresse mail valide";
+    $isSuccess = false;
+    }
+    else
+    $emailText .= "Email: $email\n";
+
+/*  genre  */  
+
+    if(isset($_POST['genre'])) {
+        if($_POST['genre'] == 'NULL') {
+            $genreError = "Votre genre svp";
+            $isSuccess = false;
+            /* faire ancre contact form */
+        }
+        else {
+            $emailText .= "Genre: $genre\n"; 
+        }
+    }
+
+/*  sujet  */  
+
+    if(isset($_POST['sujet'])) {
+            $emailText .= "Sujet: $sujet\n"; 
+            $sujet = $sujet;
+    }
+
+/*  pays  */  
+
+if(isset($_POST['pays'])) {
+    if($_POST['pays'] == 'NULL') {
+        $paysError = "Votre pays svp";
+        $isSuccess = false;
+        /* faire ancre contact form */
+    }
+    else {
+        $emailText .= "Pays: $pays\n"; 
+    }
+}
+
+
+
+
 if(empty($pays)){
 $paysError = "Ecrivez votre pays svp.";
 $isSuccess = false;
 }
-if(empty($message)){
-$messageError = "Ecrivez votre message svp.";
-$isSuccess = false;
-}
 
-// if(!isset($_POST['genre']))
-// {
-// $genreError = "You forgot to select your Gender!";
-// }
-if(!isEmail($email)){
-$emailError = "Ecrivez votre adresse mail";
-$isSuccess = false;
-}
-else
-$emailText .= "Email: $email\n";
+
+if(empty($message)){
+    $messageError = "Ecrivez votre message svp.";
+    $isSuccess = false;
+    }
+    else
+    $emailText .= "Message: $message\n";
+
+
+
+
+    if(!empty($name)){
+        echo '<p class="errormessage" style="background-color: red; font-size: 30px;">Robot detected</p>';
+        $isSuccess = false;
+        }
+ 
+
+
+
 if($isSuccess){
-$headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
+    echo '<p class="successMessage" style="background-color: red; font-size: 30px;">MESSAGE ENVOYE</p>';
+    $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
     mail($emailTo, "Message", $emailText, $headers);
     $prenom = $nom = $email = $genre = $sujet = $pays = $message = "";
     }
-
+    else
+    echo '<p class="errormessage" style="background-color: red; font-size: 30px;">Vous avez oublie de remplir .$nom</p>';
 
     }
 
@@ -78,11 +125,6 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
     $var = htmlspecialchars($var);
     return $var;
     }
-
-
-
-
-
 
     ?>
     <!DOCTYPE html>
@@ -467,7 +509,7 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
 
                             <div class="col-md-6 col-xs-12">
                                 <div class="form-group mt-3">
-                                    <label>Prénom</label>
+                                    <label>Prenom</label>
                                     <input type="text" name="prenom" placeholder="Saisissez votre prénom"
                                         class="form-control" value="<?php echo $prenom; ?>">
                                     <p class="comments"><?php echo $prenomError; ?></p>
@@ -478,7 +520,7 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
 
                             <div class="col-md-6 col-xs-12 ">
                                 <div class="form-group mt-3">
-                                    <label>nom</label>
+                                    <label>Nom</label>
                                     <input type="text" name="nom" placeholder="Saisissez votre nom" class="form-control"
                                         value="<?php echo $nom; ?>">
                                     <p class="comments"><?php echo $nomError; ?></p>
@@ -491,14 +533,14 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                         <div class="row">
                             <div class="col-md-6 col-xs-12">
                                 <div class="form-group">
-                                    <label>email</label>
+                                    <label>Email</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">@</div>
                                         </div>
                                         <input type="text" name="email" placeholder="Saisissez votre email" class="form-control" value="<?php echo $email; ?>">
-                                        <p class="comments"><?php echo $emailError; ?></p>
                                     </div>
+                                    <p class="comments"><?php echo $emailError; ?></p>
                                 </div>
                             </div>
 
@@ -506,15 +548,16 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
 
                             <div class="col-md-6 col-xs-12">
                                 <div class="form-group">
-                                    <label for>genre</label>
+                                    <label>Genre</label>
                                     <select class="form-control" name="genre" value="<?php echo $genre; ?>">
-                                        <p class="comments"><?php echo $genreError; ?></p>
-                                        <option value="readonly">Genre</option>
-                                        <option value="menu">Homme</option>
-                                        <option value="livraison">Femme</option>
+                                        <option value="NULL">- Genre -</option>
+                                        <option <?php if ($genre == 'Homme' ) echo $genre ; ?> value="Homme">Homme</option>
+                                        <option value="Femme">Femme</option>
                                     </select>
+                                    <p class="comments"><?php echo $genreError; ?></p>
                                 </div>
                             </div>
+                           
                         </div>
 
                         <!--questions-->
@@ -522,12 +565,12 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label>sujet</label>
+                                    <label>Sujet</label>
                                     <select class="form-control" name="sujet" value="<?php echo $sujet; ?>">
-                                        <option value="readonly">Autre</option>
-                                        <option value="menu">Nos Produits</option>
-                                        <option value="livraison">Nos Services</option>
-                                        <option value="horaires">Nos Horaires</option>
+                                        <option value="Autre">Autre</option>
+                                        <option value="Nos produits">Nos Produits</option>
+                                        <option value="Nos Services">Nos Services</option>
+                                        <option value="Nos Horaires">Nos Horaires</option>
                                     </select>
                                 </div>
                             </div>
@@ -538,10 +581,9 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label>choix du Pays</label>
+                                    <label>Choix du Pays</label>
                                     <select class="form-control" name="pays" value="<?php echo $pays; ?>">
-                                        <option value="readonly">- Pays -</option>
-                                        <option value="Belgique" selected="selected">Belgique </option>
+                                        <option value="NULL" selected="selected">- Pays -</option>
                                         <option value="Afghanistan">Afghanistan </option>
                                         <option value="Afrique_Centrale">Afrique_Centrale </option>
                                         <option value="Afrique_du_sud">Afrique_du_Sud </option>
@@ -771,6 +813,7 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                                         <option value="Zambie">Zambie </option>
                                         <option value="Zimbabwe">Zimbabwe </option>
                                     </select>
+                                    <p class="comments"><?php echo $paysError; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -781,11 +824,21 @@ $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="textarea">Votre message</label>
-                                    <textarea class="form-control" id="textarea" rows="5" name="message"><?php echo $message; ?></textarea>
+                                    <textarea maxlength="1000" class="form-control" id="textarea" rows="5" name="message" style="resize: none;"><?php echo $message; ?></textarea>
+                                    <p class="comments"><?php echo $messageError; ?></p>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!--ohnohoney-->
 
+                        <div class="ohnohoney">
+                                <div class="here">
+                                    <label>Name</label>
+                                    <input type="text" name="name" placeholder="Saisissez votre prénom" class="form-control">
+                                </div>
+                            </div>
+                        <!-- create alert if input is not empty -->
                         <!--submited-->
 
                         <button class="btn text-white my-3 btn-lg" type="submit" id="btn-form"><i class ="fa fa-envelope"></i> Envoyer</button>

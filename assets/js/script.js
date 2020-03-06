@@ -1,4 +1,4 @@
-window.onscroll = function () {
+/* window.onscroll = function () {
     myFunction();
 };
 
@@ -11,4 +11,5 @@ function myFunction() {
     } else {
         document.getElementById("myNav").classList.remove("nav-colored");
     }
-}
+} */
+

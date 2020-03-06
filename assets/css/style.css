@@ -5,19 +5,6 @@ html {
 html body {
   background-color: #FFF;
   font-family: 'bellotaregular';
-  /*   .btn.text-white.my-3.btn-lg.btn-danger{
-      background-color: #303030;
-      width: 20%; */
-  /* zoom */
-  /* }
-    .fa.fa-envelope{
-      position: absolute;
-      line-height: 80px;
-      font-size: 200%;
-    
-      margin-left: -18%;
-    }
- */
 }
 
 html body .navbar-nav.mr-auto.ml-5 li.nav-item a {
@@ -115,12 +102,40 @@ html body #btn-form {
   background-color: #303030;
 }
 
+html body .btn.text-white.my-3.btn-lg {
+  -webkit-transition: all 800ms;
+  transition: all 800ms;
+}
+
+html body .btn.text-white.my-3.btn-lg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 800ms;
+  transition: all 800ms;
+}
+
 html body #list-link a {
   color: #15c5bd;
 }
 
 html body #icon a {
   color: #15c5bd;
+}
+
+html body .ohnohoney {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+
+html body .comments {
+  color: #d82c2e;
+  font-style: italic;
+  margin-top: 10px;
 }
 
 html body .ohnohoney {

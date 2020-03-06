@@ -96,25 +96,13 @@ html {
 
     }
 
-
-
-
-  /*   .btn.text-white.my-3.btn-lg.btn-danger{
-      background-color: #303030;
-      width: 20%; */
-      /* zoom */
-    /* }
-    .fa.fa-envelope{
-      position: absolute;
-      line-height: 80px;
-      font-size: 200%;
-    
-      margin-left: -18%;
+    .btn.text-white.my-3.btn-lg{ 
+      transition: all 800ms;
     }
- */
-
-
-
+    .btn.text-white.my-3.btn-lg:hover{
+      transform: scale(1.1); 
+      transition: all 800ms;
+    }
     #list-link a{
       color:#15c5bd;
     }
@@ -130,6 +118,19 @@ html {
       width: 0;
       z-index: -1;
   }
-
+  .comments{
+    color: #d82c2e;
+    font-style: italic;
+    margin-top: 10px;
+  }
+    .ohnohoney{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 0;
+        z-index: -1;
+    }
   }
 }
