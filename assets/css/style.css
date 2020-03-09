@@ -39,11 +39,22 @@ html body .btn.btn-info.register {
 
 html body .jumbotron {
   padding: 0;
+  height: 400px;
+}
+
+html body .jumbotron img {
+  height: 400px;
 }
 
 html body nav a img {
   width: 20vh;
   height: 20vh;
+}
+
+@media (max-width: 768px) {
+  html body nav #navbarSupportedContent1 ul li a {
+    font-size: 1.5rem;
+  }
 }
 
 html body .navbar-toggler {
@@ -132,19 +143,7 @@ html body .ohnohoney {
   z-index: -1;
 }
 
-html body .comments {
-  color: #d82c2e;
-  font-style: italic;
-  margin-top: 10px;
-}
-
-html body .ohnohoney {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 0;
-  z-index: -1;
+.service img {
+  min-height: 301px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -39,12 +39,23 @@ html {
 
     .jumbotron {
       padding: 0;
+      height:400px;
+      img{
+        height:400px;
+      }
     }
+
 
     nav a img {
       width: 20vh;
       height: 20vh;
     }
+   
+  @media (max-width: 768px) {
+    nav #navbarSupportedContent1 ul li a{
+          font-size: 1.5rem;
+      }
+  }
 
     .navbar-toggler {
 
@@ -95,7 +106,6 @@ html {
       background-color: #303030;
 
     }
-
     .btn.text-white.my-3.btn-lg{ 
       transition: all 800ms;
     }
@@ -118,19 +128,12 @@ html {
       width: 0;
       z-index: -1;
   }
-  .comments{
-    color: #d82c2e;
-    font-style: italic;
-    margin-top: 10px;
+
   }
-    .ohnohoney{
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 0;
-        width: 0;
-        z-index: -1;
-    }
+}
+
+.service{
+  img{
+    min-height:301px;
   }
 }

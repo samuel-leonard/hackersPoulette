@@ -24,7 +24,7 @@ $genre = $_POST['genre'];
 $sujet = veryfiInput($_POST['sujet']);
 $pays = veryfiInput($_POST['pays']);
 $message = veryfiInput($_POST['message']);
-$name = veryfiInput($_POST['name']);
+$name = veryfiInput($_POST['iFindYou']);
 $isSuccess = true;
 $emailText = "";
 
@@ -124,16 +124,17 @@ if($isSuccess){
     }
 
     ?>
-    <!DOCTYPE html>
-    <html lang="zxx">
-
+<!DOCTYPE html>
+<html lang="FR-fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site de hackers poulette mettant en avant des produits et services en rapport avec les raspberry">
+        <link rel="icon" href="../hackers-poulette-logo.ico" />
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-        <title>Hackers Poulette</title>
+        <title>Hackers Poulette spécialiste raspberry et arduino</title>
         <script src="https://kit.fontawesome.com/4e7b59516f.js" crossorigin="anonymous"></script>
     </head>
 
@@ -143,7 +144,7 @@ if($isSuccess){
         <header>
             <nav id='myNav' class="navbar navbar-expand-lg  navbar-fixed-top">
                 <a class="navbar-brand ml-5" href="#">
-                    <img src="./assets/img/hackers-poulette-logo-copie.png" alt="logo hackers poulette">
+                    <img src="./assets/img/hackers-poulette-logo-copie.png" alt="logo de la société hackers poulette spécialiste raspberry" title="logo de la société hackers poulette spécialiste raspberry">
                 </a>
                 <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
@@ -162,7 +163,7 @@ if($isSuccess){
                             <a class="nav-link h2 mr-5" href="#services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link h2" href="#contact">Contact</a>
+                            <a class="nav-link h2 " href="#contact">Contact</a>
                         </li>
                     </ul>
                     <button type="button" data-toggle="modal" data-target="#modalLoginForm"
@@ -175,52 +176,39 @@ if($isSuccess){
             </nav>
 
             <div class="jumbotron">
-                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div id="slide-one" class="carousel-item active">
-                            <img src="./assets/img/1.jpg" class="d-block w-100" alt="Rasperry">
+                        <div id="slide-one" class="carousel-item active img-responsive">
+                            <img src="./assets/img/1.jpg" class="d-block w-100 " alt="image d'un Rasperry module 4bc17y">
                             <div class="carousel-caption d-md-block">
                                 <h5 class="justify-content-center"><span>Lorem ipsum dolor sit, amet consectetur
                                         adipisicing elit. </span>
                                 </h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur amet doloremque
-                                    non, dolorum, sed
-                                    quia, maiores deserunt quibusdam deleniti qui quasi aspernatur. Accusamus quia quasi
-                                    quidem dolores ea
-                                    suscipit dicta!</p>
                                 <button type="button" class="btn btn-info">Decouvrir les offres</button>
                             </div>
                         </div>
-                        <div id="slide-two" class="carousel-item">
-                            <img src="./assets/img/2.jpg" class="d-block w-100" alt="Rasperry">
+                        <div id="slide-two" class="carousel-item img-responsive " >
+                            <img src="./assets/img/2.jpg" class="d-block w-100 " alt="image d'un Rasperry fy 2" title="image d'un Rasperry fy 2">
                             <div class="carousel-caption d-md-block">
                                 <h5 class="justify-content-center"><span>Lorem ipsum dolor sit, amet consectetur
                                         adipisicing elit. </span>
                                 </h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur amet doloremque
-                                    non, dolorum, sed
-                                    quia, maiores deserunt quibusdam deleniti qui quasi aspernatur. Accusamus quia quasi
-                                    quidem dolores ea
-                                    suscipit dicta!</p>
+                                
                                 <button type="button" class="btn btn-info">Decouvrir les offres</button>
                             </div>
                         </div>
-                        <div id="slide-three" class="carousel-item">
-                            <img src="./assets/img/1.jpg" class="d-block w-100" alt="Rasperry">
+                        <div id="slide-three" class="carousel-item img-responsive">
+                            <img src="./assets/img/3.jpg" class="d-block w-100 imageJumbo" alt="image d'un raspberry ey 4" title="image d'un raspberry ey 4">
                             <div class="carousel-caption d-md-block">
                                 <h5 class="justify-content-center"><span>Lorem ipsum dolor sit, amet consectetur
                                         adipisicing elit. </span>
                                 </h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur amet doloremque
-                                    non, dolorum, sed
-                                    quia, maiores deserunt quibusdam deleniti qui quasi aspernatur. Accusamus quia quasi
-                                    quidem dolores ea
-                                    suscipit dicta!</p>
+                                
                                 <button type="button" class="btn btn-info">Decouvrir les offres</button>
                             </div>
                         </div>
@@ -309,16 +297,16 @@ if($isSuccess){
 
         <!--Produits-->
 
-        <h1 class="text-center">Nos <b class="blue">produits</b></h1>
+        <h1 class="text-center" id="produits">Nos <b class="blue">produits</b></h1>
         <section class="p-5 text-center">
 
             <div class="row">
 
-                <div class="col-sm-3 mb-3">
+                <div class="col-sm-6 col-lg-3 mb-3">
                     <div class="card">
-                        <img src="assets/img/produits/arduino.jpg" alt="arduino" style="height:196px"
+                        <img src="assets/img/produits/arduino.jpg" alt="arduino" title="arduino" style="height:196px"
                             class="card-img-top">
-                        <div class=" card card-body">
+                        <div class="card-body">
                             <h5 class="card-title">Arduino</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
@@ -327,9 +315,9 @@ if($isSuccess){
                     </div>
                 </div>
 
-                <div class="col-sm-3 mb-3">
+                <div class="col-sm-6 col-lg-3 mb-3">
                     <div class="card">
-                        <img src="assets/img/produits/raspberry1.jpg" alt="raspberry 15b" style="height:196px"
+                        <img src="assets/img/produits/raspberry1.jpg" alt="raspberry 15b" title="raspberry 15b" style="height:196px"
                             class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Raspberry 15b</h5>
@@ -340,9 +328,9 @@ if($isSuccess){
                     </div>
                 </div>
 
-                <div class="col-sm-3 mb-3">
+                <div class="col-sm-6 col-lg-3 mb-3">
                     <div class="card">
-                        <img src="assets/img/produits/raspberry2.jpg" alt="raspberry cdc" style="height:196px"
+                        <img src="assets/img/produits/raspberry2.jpg" alt="raspberry cdc" title="raspberry cdc" style="height:196px"
                             class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Raspberry CDC</h5>
@@ -353,9 +341,9 @@ if($isSuccess){
                     </div>
                 </div>
 
-                <div class="col-sm-3 mb-3">
+                <div class="col-sm-6 col-lg-3 mb-3">
                     <div class="card">
-                        <img src="assets/img/produits/raspberry3.jpg" alt="raspberry org" style="height:196px"
+                        <img src="assets/img/produits/raspberry3.jpg" alt="raspberry org" title="raspberry XXL" style="height:196px"
                             class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Raspberry xxl</h5>
@@ -372,18 +360,18 @@ if($isSuccess){
 
 
 
-        <h1 class="text-center">Nos <b class="blue">services</b></h1>
+        <h1 class="text-center" id="services">Nos <b class="blue">services</b></h1>
         <section class="container p-5 text-center mx-auto ">
 
 
             <!--service après vente-->
 
-            <div class="row mb-5 flex-md-row-reverse  ">
+            <div class="row mb-5 flex-md-row-reverse service  ">
 
                 <div class="col-md-4 px-0">
                     <div class="card">
-                        <img src="assets/img/services/sav.jpg" alt="service après vente"
-                            style="height:260px; width:100%" class="img-thumbnail">
+                        <img src="assets/img/services/sav.jpg" alt="service après vente" title="service après vente"
+                            style=" width:100%;" class="img-thumbnail">
                     </div>
                 </div>
 
@@ -403,15 +391,16 @@ if($isSuccess){
                 </div>
 
 
+
             </div>
 
             <!--Extension de garantie-->
 
-            <div class="row my-5">
+            <div class="row my-5 service" >
 
                 <div class="col-md-4 px-0">
                     <div class="card">
-                        <img src="assets/img/services/garantie.png" alt="extension de garantie"
+                        <img src="assets/img/services/garantie.png" alt="extension de garantie" title="extension de garantie"
                             style="height:260px; width:100%" class="img-thumbnail">
                     </div>
                 </div>
@@ -432,14 +421,15 @@ if($isSuccess){
                     </div>
                 </div>
 
+
             </div>
 
             <!--online training-->
 
-            <div class="row mb-5 flex-md-row-reverse  ">
+            <div class="row mb-5 flex-md-row-reverse service ">
 
                 <div class="col-md-4 px-0">
-                    <img src="assets/img/services/online-training.jpeg" alt="online training" class="img-thumbnail card"
+                    <img src="assets/img/services/online-training.jpeg" alt="online training" title="online training" class="img-thumbnail card"
                         style="height:260px; width:100%">
                 </div>
 
@@ -460,14 +450,15 @@ if($isSuccess){
                     </div>
                 </div>
 
+
             </div>
 
             <!--Démonstration en entreprise-->
 
-            <div class="row ">
+            <div class="row service ">
 
                 <div class="col-md-4 px-0">
-                    <img src="assets/img/services/board.jpg" alt="Démonstration en entreprise"
+                    <img src="assets/img/services/board.jpg" alt="Démonstration en entreprise" title="Démonstration en entreprise"
                         class="img-thumbnail card" style="height:260px;width:100%" id="card">
                 </div>
 
@@ -477,6 +468,7 @@ if($isSuccess){
                         Démonstration en entrerprise
                     </div>
 
+
                     <div class="card-body">
                         <h5 class="card-title">Démonstration en entreprise</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aliquid,
@@ -484,370 +476,374 @@ if($isSuccess){
                             minus nobis accusamus dignissimos rem nam odit eos. Minima consequuntur, eaque voluptatem
                             modi perspiciatis
                             iusto id maxime itaque.</p>
-                        <a href="#" class="btn btn-info">Go somewhere</a>
+                        <a href="#" class="btn btn-info">En savoir plus</a>
                     </div>
                 </div>
             </div>
 
-            <!--section contact-->
+            
+
+
 
         </section>
 
-        <h1 class="mb-5 text-center">Nous <b class="blue">contacter</b></h1>
+            <!--section contact-->
 
-        <div class="container">
-            <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
-                role="form">
+
+<h1 class="mb-5 text-center">Nous <b class="blue">contacter</b></h1>
+
+<div class="container">
+    <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+        role="form">
+        <div class="row">
+            <div class="col-xl-10 col-md-12  mx-auto  border rounded shadow-lg background-form text-white">
                 <div class="row">
-                    <div class="col-xl-10 col-md-12  mx-auto  border rounded shadow-lg background-form text-white">
-                        <div class="row">
 
-                            <!--first-name-->
+                    <!--first-name-->
 
-                            <div class="col-md-6 col-xs-12">
-                                <div class="form-group mt-3">
-                                    <label>Prenom</label>
-                                    <input type="text" onkeyup="verifPrenom();" name="prenom" id="prenom" placeholder="Saisissez votre prénom"
-                                        class="form-control" value="<?php echo $prenom; ?>">
-                                    <p class="comments"><?php echo $prenomError; ?></p>
-                                </div>
-                            </div>
-
-                            <!--second-name-->
-
-                            <div class="col-md-6 col-xs-12 ">
-                                <div class="form-group mt-3">
-                                    <label>Nom</label>
-                                    <input type="text" onkeyup="verifNom();" name="nom" id="nom" placeholder="Saisissez votre nom" class="form-control"
-                                        value="<?php echo $nom; ?>">
-                                    <p class="comments"><?php echo $nomError; ?></p>
-                                </div>
-                            </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group mt-3">
+                            <label>Prenom</label>
+                            <input type="text" onkeyup="verifPrenom();" name="prenom" id="prenom" placeholder="Saisissez votre prénom"
+                                class="form-control" value="<?php echo $prenom; ?>">
+                            <p class="comments"><?php echo $prenomError; ?></p>
                         </div>
+                    </div>
 
-                        <!--email-->
+                    <!--second-name-->
 
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">@</div>
-                                        </div>
-                                        <input onkeyup="verifMail();" type="text" name="email" id="email" placeholder="Saisissez votre email" class="form-control" value="<?php echo $email; ?>">
-                                    </div>
-                                    <p class="comments"><?php echo $emailError; ?></p>
-                                </div>
-                            </div>
-
-                        
-                            <!--gender-->
-
-                            <div class="col-md-6 col-xs-12">
-                                <div class="form-group">
-                                    <label>Genre</label>
-                                    <select class="form-control" name="genre" value="<?php echo $genre; ?>">
-                                        <option value="NULL">- Genre -</option>
-                                        <option <?php if ($genre == 'Homme' ) echo $genre ; ?> value="Homme">Homme</option>
-                                        <option value="Femme">Femme</option>
-                                    </select>
-                                    <p class="comments"><?php echo $genreError; ?></p>
-                                </div>
-                            </div>
-                           
+                    <div class="col-md-6 col-xs-12 ">
+                        <div class="form-group mt-3">
+                            <label>Nom</label>
+                            <input type="text" onkeyup="verifNom();" name="nom" id="nom" placeholder="Saisissez votre nom" class="form-control"
+                                value="<?php echo $nom; ?>">
+                            <p class="comments"><?php echo $nomError; ?></p>
                         </div>
-
-                        <!--questions-->
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label>Sujet</label>
-                                    <select class="form-control" name="sujet" value="<?php echo $sujet; ?>">
-                                        <option value="Autre">Autre</option>
-                                        <option value="Nos produits">Nos Produits</option>
-                                        <option value="Nos Services">Nos Services</option>
-                                        <option value="Nos Horaires">Nos Horaires</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Country choice-->
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label>Choix du Pays</label>
-                                    <select class="form-control" name="pays" value="<?php echo $pays; ?>">
-                                        <option value="NULL" selected="selected">- Pays -</option>
-                                        <option value="Afghanistan">Afghanistan </option>
-                                        <option value="Afrique_Centrale">Afrique_Centrale </option>
-                                        <option value="Afrique_du_sud">Afrique_du_Sud </option>
-                                        <option value="Albanie">Albanie </option>
-                                        <option value="Algerie">Algerie </option>
-                                        <option value="Allemagne">Allemagne </option>
-                                        <option value="Andorre">Andorre </option>
-                                        <option value="Angola">Angola </option>
-                                        <option value="Anguilla">Anguilla </option>
-                                        <option value="Arabie_Saoudite">Arabie_Saoudite </option>
-                                        <option value="Argentine">Argentine </option>
-                                        <option value="Armenie">Armenie </option>
-                                        <option value="Australie">Australie </option>
-                                        <option value="Autriche">Autriche </option>
-                                        <option value="Azerbaidjan">Azerbaidjan </option>
-                                        <option value="Bahamas">Bahamas </option>
-                                        <option value="Bangladesh">Bangladesh </option>
-                                        <option value="Barbade">Barbade </option>
-                                        <option value="Bahrein">Bahrein </option>
-                                        <option value="Belgique">Belgique </option>
-                                        <option value="Belize">Belize </option>
-                                        <option value="Benin">Benin </option>
-                                        <option value="Bermudes">Bermudes </option>
-                                        <option value="Bielorussie">Bielorussie </option>
-                                        <option value="Bolivie">Bolivie </option>
-                                        <option value="Botswana">Botswana </option>
-                                        <option value="Bhoutan">Bhoutan </option>
-                                        <option value="Boznie_Herzegovine">Boznie_Herzegovine </option>
-                                        <option value="Bresil">Bresil </option>
-                                        <option value="Brunei">Brunei </option>
-                                        <option value="Bulgarie">Bulgarie </option>
-                                        <option value="Burkina_Faso">Burkina_Faso </option>
-                                        <option value="Burundi">Burundi </option>
-                                        <option value="Caiman">Caiman </option>
-                                        <option value="Cambodge">Cambodge </option>
-                                        <option value="Cameroun">Cameroun </option>
-                                        <option value="Canada">Canada </option>
-                                        <option value="Canaries">Canaries </option>
-                                        <option value="Cap_vert">Cap_Vert </option>
-                                        <option value="Chili">Chili </option>
-                                        <option value="Chine">Chine </option>
-                                        <option value="Chypre">Chypre </option>
-                                        <option value="Colombie">Colombie </option>
-                                        <option value="Comores">Colombie </option>
-                                        <option value="Congo">Congo </option>
-                                        <option value="Congo_democratique">Congo_democratique </option>
-                                        <option value="Cook">Cook </option>
-                                        <option value="Coree_du_Nord">Coree_du_Nord </option>
-                                        <option value="Coree_du_Sud">Coree_du_Sud </option>
-                                        <option value="Costa_Rica">Costa_Rica </option>
-                                        <option value="Cote_d_Ivoire">CÃ´te_d_Ivoire </option>
-                                        <option value="Croatie">Croatie </option>
-                                        <option value="Cuba">Cuba </option>
-                                        <option value="Danemark">Danemark </option>
-                                        <option value="Djibouti">Djibouti </option>
-                                        <option value="Dominique">Dominique </option>
-                                        <option value="Egypte">Egypte </option>
-                                        <option value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </option>
-                                        <option value="Equateur">Equateur </option>
-                                        <option value="Erythree">Erythree </option>
-                                        <option value="Espagne">Espagne </option>
-                                        <option value="Estonie">Estonie </option>
-                                        <option value="Etats_Unis">Etats_Unis </option>
-                                        <option value="Ethiopie">Ethiopie </option>
-                                        <option value="Falkland">Falkland </option>
-                                        <option value="Feroe">Feroe </option>
-                                        <option value="Fidji">Fidji </option>
-                                        <option value="Finlande">Finlande </option>
-                                        <option value="France">France </option>
-                                        <option value="Gabon">Gabon </option>
-                                        <option value="Gambie">Gambie </option>
-                                        <option value="Georgie">Georgie </option>
-                                        <option value="Ghana">Ghana </option>
-                                        <option value="Gibraltar">Gibraltar </option>
-                                        <option value="Grece">Grece </option>
-                                        <option value="Grenade">Grenade </option>
-                                        <option value="Groenland">Groenland </option>
-                                        <option value="Guadeloupe">Guadeloupe </option>
-                                        <option value="Guam">Guam </option>
-                                        <option value="Guatemala">Guatemala</option>
-                                        <option value="Guernesey">Guernesey </option>
-                                        <option value="Guinee">Guinee </option>
-                                        <option value="Guinee_Bissau">Guinee_Bissau </option>
-                                        <option value="Guinee equatoriale">Guinee_Equatoriale </option>
-                                        <option value="Guyana">Guyana </option>
-                                        <option value="Guyane_Francaise ">Guyane_Francaise </option>
-                                        <option value="Haiti">Haiti </option>
-                                        <option value="Hawaii">Hawaii </option>
-                                        <option value="Honduras">Honduras </option>
-                                        <option value="Hong_Kong">Hong_Kong </option>
-                                        <option value="Hongrie">Hongrie </option>
-                                        <option value="Inde">Inde </option>
-                                        <option value="Indonesie">Indonesie </option>
-                                        <option value="Iran">Iran </option>
-                                        <option value="Iraq">Iraq </option>
-                                        <option value="Irlande">Irlande </option>
-                                        <option value="Islande">Islande </option>
-                                        <option value="Israel">Israel </option>
-                                        <option value="Italie">italie </option>
-                                        <option value="Jamaique">Jamaique </option>
-                                        <option value="Jan Mayen">Jan Mayen </option>
-                                        <option value="Japon">Japon </option>
-                                        <option value="Jersey">Jersey </option>
-                                        <option value="Jordanie">Jordanie </option>
-                                        <option value="Kazakhstan">Kazakhstan </option>
-                                        <option value="Kenya">Kenya </option>
-                                        <option value="Kirghizstan">Kirghizistan </option>
-                                        <option value="Kiribati">Kiribati </option>
-                                        <option value="Koweit">Koweit </option>
-                                        <option value="Laos">Laos </option>
-                                        <option value="Lesotho">Lesotho </option>
-                                        <option value="Lettonie">Lettonie </option>
-                                        <option value="Liban">Liban </option>
-                                        <option value="Liberia">Liberia </option>
-                                        <option value="Liechtenstein">Liechtenstein </option>
-                                        <option value="Lituanie">Lituanie </option>
-                                        <option value="Luxembourg">Luxembourg </option>
-                                        <option value="Lybie">Lybie </option>
-                                        <option value="Macao">Macao </option>
-                                        <option value="Macedoine">Macedoine </option>
-                                        <option value="Madagascar">Madagascar </option>
-                                        <option value="MadÃ¨re">MadÃ¨re </option>
-                                        <option value="Malaisie">Malaisie </option>
-                                        <option value="Malawi">Malawi </option>
-                                        <option value="Maldives">Maldives </option>
-                                        <option value="Mali">Mali </option>
-                                        <option value="Malte">Malte </option>
-                                        <option value="Man">Man </option>
-                                        <option value="Mariannes du Nord">Mariannes du Nord </option>
-                                        <option value="Maroc">Maroc </option>
-                                        <option value="Marshall">Marshall </option>
-                                        <option value="Martinique">Martinique </option>
-                                        <option value="Maurice">Maurice </option>
-                                        <option value="Mauritanie">Mauritanie </option>
-                                        <option value="Mayotte">Mayotte </option>
-                                        <option value="Mexique">Mexique </option>
-                                        <option value="Micronesie">Micronesie </option>
-                                        <option value="Midway">Midway </option>
-                                        <option value="Moldavie">Moldavie </option>
-                                        <option value="Monaco">Monaco </option>
-                                        <option value="Mongolie">Mongolie </option>
-                                        <option value="Montserrat">Montserrat </option>
-                                        <option value="Mozambique">Mozambique </option>
-                                        <option value="Namibie">Namibie </option>
-                                        <option value="Nauru">Nauru </option>
-                                        <option value="Nepal">Nepal </option>
-                                        <option value="Nicaragua">Nicaragua </option>
-                                        <option value="Niger">Niger </option>
-                                        <option value="Nigeria">Nigeria </option>
-                                        <option value="Niue">Niue </option>
-                                        <option value="Norfolk">Norfolk </option>
-                                        <option value="Norvege">Norvege </option>
-                                        <option value="Nouvelle_Caledonie">Nouvelle_Caledonie </option>
-                                        <option value="Nouvelle_Zelande">Nouvelle_Zelande </option>
-                                        <option value="Oman">Oman </option>
-                                        <option value="Ouganda">Ouganda </option>
-                                        <option value="Ouzbekistan">Ouzbekistan </option>
-                                        <option value="Pakistan">Pakistan </option>
-                                        <option value="Palau">Palau </option>
-                                        <option value="Palestine">Palestine </option>
-                                        <option value="Panama">Panama </option>
-                                        <option value="Papouasie_Nouvelle_Guinee">Papouasie_Nouvelle_Guinee </option>
-                                        <option value="Paraguay">Paraguay </option>
-                                        <option value="Pays_Bas">Pays_Bas </option>
-                                        <option value="Perou">Perou </option>
-                                        <option value="Philippines">Philippines </option>
-                                        <option value="Pologne">Pologne </option>
-                                        <option value="Polynesie">Polynesie </option>
-                                        <option value="Porto_Rico">Porto_Rico </option>
-                                        <option value="Portugal">Portugal </option>
-                                        <option value="Qatar">Qatar </option>
-                                        <option value="Republique_Dominicaine">Republique_Dominicaine </option>
-                                        <option value="Republique_Tcheque">Republique_Tcheque </option>
-                                        <option value="Reunion">Reunion </option>
-                                        <option value="Roumanie">Roumanie </option>
-                                        <option value="Royaume_Uni">Royaume_Uni </option>
-                                        <option value="Russie">Russie </option>
-                                        <option value="Rwanda">Rwanda </option>
-                                        <option value="Sahara Occidental">Sahara Occidental </option>
-                                        <option value="Sainte_Lucie">Sainte_Lucie </option>
-                                        <option value="Saint_Marin">Saint_Marin </option>
-                                        <option value="Salomon">Salomon </option>
-                                        <option value="Salvador">Salvador </option>
-                                        <option value="Samoa_Occidentales">Samoa_Occidentales</option>
-                                        <option value="Samoa_Americaine">Samoa_Americaine </option>
-                                        <option value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </option>
-                                        <option value="Senegal">Senegal </option>
-                                        <option value="Seychelles">Seychelles </option>
-                                        <option value="Sierra Leone">Sierra Leone </option>
-                                        <option value="Singapour">Singapour </option>
-                                        <option value="Slovaquie">Slovaquie </option>
-                                        <option value="Slovenie">Slovenie</option>
-                                        <option value="Somalie">Somalie </option>
-                                        <option value="Soudan">Soudan </option>
-                                        <option value="Sri_Lanka">Sri_Lanka </option>
-                                        <option value="Suede">Suede </option>
-                                        <option value="Suisse">Suisse </option>
-                                        <option value="Surinam">Surinam </option>
-                                        <option value="Swaziland">Swaziland </option>
-                                        <option value="Syrie">Syrie </option>
-                                        <option value="Tadjikistan">Tadjikistan </option>
-                                        <option value="Taiwan">Taiwan </option>
-                                        <option value="Tonga">Tonga </option>
-                                        <option value="Tanzanie">Tanzanie </option>
-                                        <option value="Tchad">Tchad </option>
-                                        <option value="Thailande">Thailande </option>
-                                        <option value="Tibet">Tibet </option>
-                                        <option value="Timor_Oriental">Timor_Oriental </option>
-                                        <option value="Togo">Togo </option>
-                                        <option value="Trinite_et_Tobago">Trinite_et_Tobago </option>
-                                        <option value="Tristan da cunha">Tristan de cuncha </option>
-                                        <option value="Tunisie">Tunisie </option>
-                                        <option value="Turkmenistan">Turmenistan </option>
-                                        <option value="Turquie">Turquie </option>
-                                        <option value="Ukraine">Ukraine </option>
-                                        <option value="Uruguay">Uruguay </option>
-                                        <option value="Vanuatu">Vanuatu </option>
-                                        <option value="Vatican">Vatican </option>
-                                        <option value="Venezuela">Venezuela </option>
-                                        <option value="Vierges_Americaines">Vierges_Americaines </option>
-                                        <option value="Vierges_Britanniques">Vierges_Britanniques </option>
-                                        <option value="Vietnam">Vietnam </option>
-                                        <option value="Wake">Wake </option>
-                                        <option value="Wallis et Futuma">Wallis et Futuma </option>
-                                        <option value="Yemen">Yemen </option>
-                                        <option value="Yougoslavie">Yougoslavie </option>
-                                        <option value="Zambie">Zambie </option>
-                                        <option value="Zimbabwe">Zimbabwe </option>
-                                    </select>
-                                    <p class="comments"><?php echo $paysError; ?></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--message-->
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="textarea">Votre message</label>
-                                    <textarea maxlength="1000" onkeyup="verifMessage();" class="form-control" id="textarea" rows="5" name="message" style="resize: none;"><?php echo $message; ?></textarea>
-                                    <p class="comments"><?php echo $messageError; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!--ohnohoney-->
-
-                        <div class="ohnohoney">
-                                <div class="here">
-                                    <label>Name</label>
-                                    <input type="text" name="name" placeholder="Saisissez votre prénom" class="form-control">
-                                </div>
-                            </div>
-                        <!-- create alert if input is not empty -->
-                        <!--submited-->
-
-                        <button class="btn text-white my-3 btn-lg" type="submit" onClick="verifierFormulaire();" id="btn-form"><i class ="fa fa-envelope"></i> Envoyer</button>
-                        <p style="display:<?php if($isSuccess) echo'block'; else echo 'none'; ?>"> Votre message a bien été envoyé!!!</p>
                     </div>
                 </div>
-            </form>
+
+                <!--email-->
+
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <input onkeyup="verifMail();" type="text" name="email" id="email" placeholder="Saisissez votre email" class="form-control" value="<?php echo $email; ?>">
+                            </div>
+                            <p class="comments"><?php echo $emailError; ?></p>
+                        </div>
+                    </div>
+
+                
+                    <!--gender-->
+
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label>Genre</label>
+                            <select class="form-control" name="genre" value="<?php echo $genre; ?>">
+                                <option value="NULL">- Genre -</option>
+                                <option <?php if ($genre == 'Homme' ) echo $genre ; ?> value="Homme">Homme</option>
+                                <option value="Femme">Femme</option>
+                            </select>
+                            <p class="comments"><?php echo $genreError; ?></p>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <!--questions-->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label>Sujet</label>
+                            <select class="form-control" name="sujet" value="<?php echo $sujet; ?>">
+                                <option value="Autre">Autre</option>
+                                <option value="Nos produits">Nos Produits</option>
+                                <option value="Nos Services">Nos Services</option>
+                                <option value="Nos Horaires">Nos Horaires</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Country choice-->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label>Choix du Pays</label>
+                            <select class="form-control" name="pays" value="<?php echo $pays; ?>">
+                                <option value="NULL" selected="selected">- Pays -</option>
+                                <option value="Afghanistan">Afghanistan </option>
+                                <option value="Afrique_Centrale">Afrique_Centrale </option>
+                                <option value="Afrique_du_sud">Afrique_du_Sud </option>
+                                <option value="Albanie">Albanie </option>
+                                <option value="Algerie">Algerie </option>
+                                <option value="Allemagne">Allemagne </option>
+                                <option value="Andorre">Andorre </option>
+                                <option value="Angola">Angola </option>
+                                <option value="Anguilla">Anguilla </option>
+                                <option value="Arabie_Saoudite">Arabie_Saoudite </option>
+                                <option value="Argentine">Argentine </option>
+                                <option value="Armenie">Armenie </option>
+                                <option value="Australie">Australie </option>
+                                <option value="Autriche">Autriche </option>
+                                <option value="Azerbaidjan">Azerbaidjan </option>
+                                <option value="Bahamas">Bahamas </option>
+                                <option value="Bangladesh">Bangladesh </option>
+                                <option value="Barbade">Barbade </option>
+                                <option value="Bahrein">Bahrein </option>
+                                <option value="Belgique">Belgique </option>
+                                <option value="Belize">Belize </option>
+                                <option value="Benin">Benin </option>
+                                <option value="Bermudes">Bermudes </option>
+                                <option value="Bielorussie">Bielorussie </option>
+                                <option value="Bolivie">Bolivie </option>
+                                <option value="Botswana">Botswana </option>
+                                <option value="Bhoutan">Bhoutan </option>
+                                <option value="Boznie_Herzegovine">Boznie_Herzegovine </option>
+                                <option value="Bresil">Bresil </option>
+                                <option value="Brunei">Brunei </option>
+                                <option value="Bulgarie">Bulgarie </option>
+                                <option value="Burkina_Faso">Burkina_Faso </option>
+                                <option value="Burundi">Burundi </option>
+                                <option value="Caiman">Caiman </option>
+                                <option value="Cambodge">Cambodge </option>
+                                <option value="Cameroun">Cameroun </option>
+                                <option value="Canada">Canada </option>
+                                <option value="Canaries">Canaries </option>
+                                <option value="Cap_vert">Cap_Vert </option>
+                                <option value="Chili">Chili </option>
+                                <option value="Chine">Chine </option>
+                                <option value="Chypre">Chypre </option>
+                                <option value="Colombie">Colombie </option>
+                                <option value="Comores">Colombie </option>
+                                <option value="Congo">Congo </option>
+                                <option value="Congo_democratique">Congo_democratique </option>
+                                <option value="Cook">Cook </option>
+                                <option value="Coree_du_Nord">Coree_du_Nord </option>
+                                <option value="Coree_du_Sud">Coree_du_Sud </option>
+                                <option value="Costa_Rica">Costa_Rica </option>
+                                <option value="Cote_d_Ivoire">CÃ´te_d_Ivoire </option>
+                                <option value="Croatie">Croatie </option>
+                                <option value="Cuba">Cuba </option>
+                                <option value="Danemark">Danemark </option>
+                                <option value="Djibouti">Djibouti </option>
+                                <option value="Dominique">Dominique </option>
+                                <option value="Egypte">Egypte </option>
+                                <option value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </option>
+                                <option value="Equateur">Equateur </option>
+                                <option value="Erythree">Erythree </option>
+                                <option value="Espagne">Espagne </option>
+                                <option value="Estonie">Estonie </option>
+                                <option value="Etats_Unis">Etats_Unis </option>
+                                <option value="Ethiopie">Ethiopie </option>
+                                <option value="Falkland">Falkland </option>
+                                <option value="Feroe">Feroe </option>
+                                <option value="Fidji">Fidji </option>
+                                <option value="Finlande">Finlande </option>
+                                <option value="France">France </option>
+                                <option value="Gabon">Gabon </option>
+                                <option value="Gambie">Gambie </option>
+                                <option value="Georgie">Georgie </option>
+                                <option value="Ghana">Ghana </option>
+                                <option value="Gibraltar">Gibraltar </option>
+                                <option value="Grece">Grece </option>
+                                <option value="Grenade">Grenade </option>
+                                <option value="Groenland">Groenland </option>
+                                <option value="Guadeloupe">Guadeloupe </option>
+                                <option value="Guam">Guam </option>
+                                <option value="Guatemala">Guatemala</option>
+                                <option value="Guernesey">Guernesey </option>
+                                <option value="Guinee">Guinee </option>
+                                <option value="Guinee_Bissau">Guinee_Bissau </option>
+                                <option value="Guinee equatoriale">Guinee_Equatoriale </option>
+                                <option value="Guyana">Guyana </option>
+                                <option value="Guyane_Francaise ">Guyane_Francaise </option>
+                                <option value="Haiti">Haiti </option>
+                                <option value="Hawaii">Hawaii </option>
+                                <option value="Honduras">Honduras </option>
+                                <option value="Hong_Kong">Hong_Kong </option>
+                                <option value="Hongrie">Hongrie </option>
+                                <option value="Inde">Inde </option>
+                                <option value="Indonesie">Indonesie </option>
+                                <option value="Iran">Iran </option>
+                                <option value="Iraq">Iraq </option>
+                                <option value="Irlande">Irlande </option>
+                                <option value="Islande">Islande </option>
+                                <option value="Israel">Israel </option>
+                                <option value="Italie">italie </option>
+                                <option value="Jamaique">Jamaique </option>
+                                <option value="Jan Mayen">Jan Mayen </option>
+                                <option value="Japon">Japon </option>
+                                <option value="Jersey">Jersey </option>
+                                <option value="Jordanie">Jordanie </option>
+                                <option value="Kazakhstan">Kazakhstan </option>
+                                <option value="Kenya">Kenya </option>
+                                <option value="Kirghizstan">Kirghizistan </option>
+                                <option value="Kiribati">Kiribati </option>
+                                <option value="Koweit">Koweit </option>
+                                <option value="Laos">Laos </option>
+                                <option value="Lesotho">Lesotho </option>
+                                <option value="Lettonie">Lettonie </option>
+                                <option value="Liban">Liban </option>
+                                <option value="Liberia">Liberia </option>
+                                <option value="Liechtenstein">Liechtenstein </option>
+                                <option value="Lituanie">Lituanie </option>
+                                <option value="Luxembourg">Luxembourg </option>
+                                <option value="Lybie">Lybie </option>
+                                <option value="Macao">Macao </option>
+                                <option value="Macedoine">Macedoine </option>
+                                <option value="Madagascar">Madagascar </option>
+                                <option value="MadÃ¨re">MadÃ¨re </option>
+                                <option value="Malaisie">Malaisie </option>
+                                <option value="Malawi">Malawi </option>
+                                <option value="Maldives">Maldives </option>
+                                <option value="Mali">Mali </option>
+                                <option value="Malte">Malte </option>
+                                <option value="Man">Man </option>
+                                <option value="Mariannes du Nord">Mariannes du Nord </option>
+                                <option value="Maroc">Maroc </option>
+                                <option value="Marshall">Marshall </option>
+                                <option value="Martinique">Martinique </option>
+                                <option value="Maurice">Maurice </option>
+                                <option value="Mauritanie">Mauritanie </option>
+                                <option value="Mayotte">Mayotte </option>
+                                <option value="Mexique">Mexique </option>
+                                <option value="Micronesie">Micronesie </option>
+                                <option value="Midway">Midway </option>
+                                <option value="Moldavie">Moldavie </option>
+                                <option value="Monaco">Monaco </option>
+                                <option value="Mongolie">Mongolie </option>
+                                <option value="Montserrat">Montserrat </option>
+                                <option value="Mozambique">Mozambique </option>
+                                <option value="Namibie">Namibie </option>
+                                <option value="Nauru">Nauru </option>
+                                <option value="Nepal">Nepal </option>
+                                <option value="Nicaragua">Nicaragua </option>
+                                <option value="Niger">Niger </option>
+                                <option value="Nigeria">Nigeria </option>
+                                <option value="Niue">Niue </option>
+                                <option value="Norfolk">Norfolk </option>
+                                <option value="Norvege">Norvege </option>
+                                <option value="Nouvelle_Caledonie">Nouvelle_Caledonie </option>
+                                <option value="Nouvelle_Zelande">Nouvelle_Zelande </option>
+                                <option value="Oman">Oman </option>
+                                <option value="Ouganda">Ouganda </option>
+                                <option value="Ouzbekistan">Ouzbekistan </option>
+                                <option value="Pakistan">Pakistan </option>
+                                <option value="Palau">Palau </option>
+                                <option value="Palestine">Palestine </option>
+                                <option value="Panama">Panama </option>
+                                <option value="Papouasie_Nouvelle_Guinee">Papouasie_Nouvelle_Guinee </option>
+                                <option value="Paraguay">Paraguay </option>
+                                <option value="Pays_Bas">Pays_Bas </option>
+                                <option value="Perou">Perou </option>
+                                <option value="Philippines">Philippines </option>
+                                <option value="Pologne">Pologne </option>
+                                <option value="Polynesie">Polynesie </option>
+                                <option value="Porto_Rico">Porto_Rico </option>
+                                <option value="Portugal">Portugal </option>
+                                <option value="Qatar">Qatar </option>
+                                <option value="Republique_Dominicaine">Republique_Dominicaine </option>
+                                <option value="Republique_Tcheque">Republique_Tcheque </option>
+                                <option value="Reunion">Reunion </option>
+                                <option value="Roumanie">Roumanie </option>
+                                <option value="Royaume_Uni">Royaume_Uni </option>
+                                <option value="Russie">Russie </option>
+                                <option value="Rwanda">Rwanda </option>
+                                <option value="Sahara Occidental">Sahara Occidental </option>
+                                <option value="Sainte_Lucie">Sainte_Lucie </option>
+                                <option value="Saint_Marin">Saint_Marin </option>
+                                <option value="Salomon">Salomon </option>
+                                <option value="Salvador">Salvador </option>
+                                <option value="Samoa_Occidentales">Samoa_Occidentales</option>
+                                <option value="Samoa_Americaine">Samoa_Americaine </option>
+                                <option value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </option>
+                                <option value="Senegal">Senegal </option>
+                                <option value="Seychelles">Seychelles </option>
+                                <option value="Sierra Leone">Sierra Leone </option>
+                                <option value="Singapour">Singapour </option>
+                                <option value="Slovaquie">Slovaquie </option>
+                                <option value="Slovenie">Slovenie</option>
+                                <option value="Somalie">Somalie </option>
+                                <option value="Soudan">Soudan </option>
+                                <option value="Sri_Lanka">Sri_Lanka </option>
+                                <option value="Suede">Suede </option>
+                                <option value="Suisse">Suisse </option>
+                                <option value="Surinam">Surinam </option>
+                                <option value="Swaziland">Swaziland </option>
+                                <option value="Syrie">Syrie </option>
+                                <option value="Tadjikistan">Tadjikistan </option>
+                                <option value="Taiwan">Taiwan </option>
+                                <option value="Tonga">Tonga </option>
+                                <option value="Tanzanie">Tanzanie </option>
+                                <option value="Tchad">Tchad </option>
+                                <option value="Thailande">Thailande </option>
+                                <option value="Tibet">Tibet </option>
+                                <option value="Timor_Oriental">Timor_Oriental </option>
+                                <option value="Togo">Togo </option>
+                                <option value="Trinite_et_Tobago">Trinite_et_Tobago </option>
+                                <option value="Tristan da cunha">Tristan de cuncha </option>
+                                <option value="Tunisie">Tunisie </option>
+                                <option value="Turkmenistan">Turmenistan </option>
+                                <option value="Turquie">Turquie </option>
+                                <option value="Ukraine">Ukraine </option>
+                                <option value="Uruguay">Uruguay </option>
+                                <option value="Vanuatu">Vanuatu </option>
+                                <option value="Vatican">Vatican </option>
+                                <option value="Venezuela">Venezuela </option>
+                                <option value="Vierges_Americaines">Vierges_Americaines </option>
+                                <option value="Vierges_Britanniques">Vierges_Britanniques </option>
+                                <option value="Vietnam">Vietnam </option>
+                                <option value="Wake">Wake </option>
+                                <option value="Wallis et Futuma">Wallis et Futuma </option>
+                                <option value="Yemen">Yemen </option>
+                                <option value="Yougoslavie">Yougoslavie </option>
+                                <option value="Zambie">Zambie </option>
+                                <option value="Zimbabwe">Zimbabwe </option>
+                            </select>
+                            <p class="comments"><?php echo $paysError; ?></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--message-->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="textarea">Votre message</label>
+                            <textarea maxlength="1000" onkeyup="verifMessage();" class="form-control" id="textarea" rows="5" name="message" style="resize: none;"><?php echo $message; ?></textarea>
+                            <p class="comments"><?php echo $messageError; ?></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--ohnohoney-->
+
+                <div class="ohnohoney">
+                        <div class="here">
+                            <input type="text" name="iFindYou" placeholder="Saisissez votre prénom" class="form-control">
+                        </div>
+                    </div>
+                <!-- create alert if input is not empty -->
+                <!--submited-->
+
+                <button class="btn text-white my-3 btn-lg" type="submit" onClick="verifierFormulaire();" id="btn-form"><i class ="fa fa-envelope"></i> Envoyer</button>
+                <p style="display:<?php if($isSuccess) echo'block'; else echo 'none'; ?>"> Votre message a bien été envoyé!!!</p>
+            </div>
         </div>
+    </form>
+</div>
+
 
         <!-- Footer -->
-
         <footer class="page-footer font-small text-white  pt-4 mt-5">
 
             <div class="container text-center text-md-left">
@@ -863,7 +859,7 @@ if($isSuccess){
                         <ul class="list-unstyled">
                             <li>1 Square des martyrs,</li>
                             <li>6000 Charleroi</li>
-                            <li>tel: XXXX XXX XXX</li>
+                            <li>tel: 0444 444 444 </li>
                         </ul>
                     </div>
                     <!-- Grid column -->
@@ -889,16 +885,16 @@ if($isSuccess){
 
                         <ul class="list-unstyled" id="list-link">
                             <li>
-                                <a href="#!">Nos partenaires</a>
+                                <a href="#!" target="_blank "title="lien vers les partenaires de hackerspoulette">Nos partenaires</a>
                             </li>
                             <li>
-                                <a href="#!">Revues de presse</a>
+                                <a href="#!" target="_blank "title="lien vers les revues de presses sur hackerspoulette">Revues de presse</a>
                             </li>
                             <li>
-                                <a href="#!">Notre catalogue</a>
+                                <a href="#!" target="_blank "title="lien vers le catalogue en ligne de hackerspoulette">Notre catalogue</a>
                             </li>
                             <li>
-                                <a href="#!">Blog</a>
+                                <a href="#!" target="_blank" title="lien vers le blog de hackerspoulette">Blog</a>
                             </li>
                         </ul>
 
@@ -933,27 +929,23 @@ if($isSuccess){
             <!-- Social buttons -->
             <ul class="list-unstyled list-inline text-center" id="icon">
                 <li class="list-inline-item">
-                    <a class="fb-ic my-font-awesome" href="#">
+                    <a class="fb-ic my-font-awesome" href="#" title="suivez hackerspoulette sur facebook">
                         <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="tw-ic my-font-awesome" href="#">
+                    <a class="tw-ic my-font-awesome" href="#" title="suivez hackerspoulette sur twitter">
                         <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                     </a>
                 </li>
+
                 <li class="list-inline-item">
-                    <a class="gplus-ic my-font-awesome" href="#">
-                        <i class="fab fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="li-ic my-font-awesome" href="#">
+                    <a class="li-ic my-font-awesome" href="#" title="suivez hackerspoulette sur linkedin">
                         <i class="fab fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="ins-ic my-font-awesome" href="#">
+                    <a class="ins-ic my-font-awesome" href="#" title="suivez hackerspoulette sur instagram">
                         <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                     </a>
                 </li>
@@ -962,19 +954,12 @@ if($isSuccess){
 
             <!-- Copyright -->
             <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="#"> Tiago Rodrigues</a><a href="#"> Samuel Léonard</a>
+                <a href="https://www.linkedin.com/in/tiago-rodrigues123/" target="_blank" title="lien vers la page linkedin de tiago rodrigues"> Tiago Rodrigues</a><a href="https://www.linkedin.com/in/leonard-samuel/" target="_blank" title="lien vers la page linkedin de samuel léonard"> Samuel Léonard</a>
             </div>
             <!-- Copyright -->
 
         </footer>
         <!-- Footer -->
-
-    
-
-
-
-
-
 
         <script src="./assets/js/script.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
