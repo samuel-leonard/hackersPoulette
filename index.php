@@ -490,7 +490,7 @@ if($isSuccess){
             <!--section contact-->
 
 
-<h1 class="mb-5 text-center">Nous <b class="blue">contacter</b></h1>
+<h1 class="mb-5 text-center" id="contact">Nous <b class="blue">contacter</b></h1>
 
 <div class="container">
     <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
