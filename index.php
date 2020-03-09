@@ -1,4 +1,11 @@
 <?php 
+function pre_r ($array){
+    echo '<pre>';
+    print_r($array);
+    echo '</pre>';
+
+}
+
 $prenom = $nom = $email = $genre = $sujet = $pays = $message = $name = "";
 $prenomError = $nomError = $emailError = $genreError = $sujetError = $paysError = $messageError = $nameError = "";
 $isSuccess = false;
@@ -20,7 +27,6 @@ $message = veryfiInput($_POST['message']);
 $name = veryfiInput($_POST['name']);
 $isSuccess = true;
 $emailText = "";
-
 
 
 if(empty($prenom)){
@@ -77,14 +83,10 @@ if(isset($_POST['pays'])) {
     }
 }
 
-
-
-
 if(empty($pays)){
 $paysError = "Ecrivez votre pays svp.";
 $isSuccess = false;
 }
-
 
 if(empty($message)){
     $messageError = "Ecrivez votre message svp.";
@@ -93,25 +95,20 @@ if(empty($message)){
     else
     $emailText .= "Message: $message\n";
 
-
-
-
     if(!empty($name)){
         echo '<p class="errormessage" style="background-color: red; font-size: 30px;">Robot detected</p>';
         $isSuccess = false;
         }
  
-
-
-
 if($isSuccess){
-    echo '<p class="successMessage" style="background-color: red; font-size: 30px;">MESSAGE ENVOYE</p>';
+    echo '<p class="successMessage" style="background-color: grey; font-size: 30px; opacity: 1;">Votre message a bien été envoyé</p>';
     $headers = "From: $prenom $nom <$email>\r\nReply-To: $email";
     mail($emailTo, "Message", $emailText, $headers);
     $prenom = $nom = $email = $genre = $sujet = $pays = $message = "";
+    pre_r($_POST);
     }
     else
-    echo '<p class="errormessage" style="background-color: red; font-size: 30px;">Vous avez oublie de remplir .$nom</p>';
+    echo '<p class="errormessage" style="background-color: red; height: 0px; font-size: 0px;">Vous avez oublie de remplir </p>';
 
     }
 
@@ -510,7 +507,7 @@ if($isSuccess){
                             <div class="col-md-6 col-xs-12">
                                 <div class="form-group mt-3">
                                     <label>Prenom</label>
-                                    <input type="text" name="prenom" placeholder="Saisissez votre prénom"
+                                    <input type="text" onkeyup="verifPrenom();" name="prenom" id="prenom" placeholder="Saisissez votre prénom"
                                         class="form-control" value="<?php echo $prenom; ?>">
                                     <p class="comments"><?php echo $prenomError; ?></p>
                                 </div>
@@ -521,7 +518,7 @@ if($isSuccess){
                             <div class="col-md-6 col-xs-12 ">
                                 <div class="form-group mt-3">
                                     <label>Nom</label>
-                                    <input type="text" name="nom" placeholder="Saisissez votre nom" class="form-control"
+                                    <input type="text" onkeyup="verifNom();" name="nom" id="nom" placeholder="Saisissez votre nom" class="form-control"
                                         value="<?php echo $nom; ?>">
                                     <p class="comments"><?php echo $nomError; ?></p>
                                 </div>
@@ -538,12 +535,13 @@ if($isSuccess){
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">@</div>
                                         </div>
-                                        <input type="text" name="email" placeholder="Saisissez votre email" class="form-control" value="<?php echo $email; ?>">
+                                        <input onkeyup="verifMail();" type="text" name="email" id="email" placeholder="Saisissez votre email" class="form-control" value="<?php echo $email; ?>">
                                     </div>
                                     <p class="comments"><?php echo $emailError; ?></p>
                                 </div>
                             </div>
 
+                        
                             <!--gender-->
 
                             <div class="col-md-6 col-xs-12">
@@ -824,7 +822,7 @@ if($isSuccess){
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="textarea">Votre message</label>
-                                    <textarea maxlength="1000" class="form-control" id="textarea" rows="5" name="message" style="resize: none;"><?php echo $message; ?></textarea>
+                                    <textarea maxlength="1000" onkeyup="verifMessage();" class="form-control" id="textarea" rows="5" name="message" style="resize: none;"><?php echo $message; ?></textarea>
                                     <p class="comments"><?php echo $messageError; ?></p>
                                 </div>
                             </div>
@@ -841,7 +839,7 @@ if($isSuccess){
                         <!-- create alert if input is not empty -->
                         <!--submited-->
 
-                        <button class="btn text-white my-3 btn-lg" type="submit" id="btn-form"><i class ="fa fa-envelope"></i> Envoyer</button>
+                        <button class="btn text-white my-3 btn-lg" type="submit" onClick="verifierFormulaire();" id="btn-form"><i class ="fa fa-envelope"></i> Envoyer</button>
                         <p style="display:<?php if($isSuccess) echo'block'; else echo 'none'; ?>"> Votre message a bien été envoyé!!!</p>
                     </div>
                 </div>
@@ -970,6 +968,13 @@ if($isSuccess){
 
         </footer>
         <!-- Footer -->
+
+    
+
+
+
+
+
 
         <script src="./assets/js/script.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
