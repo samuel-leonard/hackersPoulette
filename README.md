@@ -14,7 +14,7 @@ Du 02-03-20 au 09-03-2020
 
 ## Participants au projet
 
-Tiago Rodriguès
+Tiago Rodriguès,
 Samuel Léonard
 
 ## difficultés rencontrées
