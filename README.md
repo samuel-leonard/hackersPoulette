@@ -19,7 +19,7 @@ Samuel Léonard
 
 ## difficultés rencontrées
 
-- Le coté responsive par rapport au images qui avaient des tailles différentes.
+- Le coté responsive par rapport aux images qui avaient des tailles différentes.
 
 - lors du passage sur vue mobile les cartes produits ne se placaient pas dans un ordre logique.
 
